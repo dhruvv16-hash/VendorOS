@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.vendoros.app",
+    "sha256_cert_fingerprints": ["E3:5B:C9:47:F2:D3:87:AA:46:FF:3E:3C:AC:2F:3D:43:CA:B9:9A:4A:57:E9:B2:23:36:02:D6:FA:03:2D:1A:E9"]
+  }
+}]

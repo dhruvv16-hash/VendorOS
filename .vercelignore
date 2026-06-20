@@ -1,0 +1,9 @@
+platform-admin-portal
+ios
+node_modules
+.next
+.vercel
+*.mp4
+*.zip
+*.zip.tmp
+"VendorOS - Google Play package"
