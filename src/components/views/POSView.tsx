@@ -310,7 +310,7 @@ export const POSView: React.FC = () => {
       </div>
 
       {/* Product Card Grid */}
-      <div className="flex-1 overflow-y-auto p-3 grid grid-cols-2 gap-3 pb-32 no-scrollbar">
+      <div className="flex-1 overflow-y-auto p-3 grid grid-cols-2 gap-3 pb-32 no-scrollbar" style={{ alignContent: 'start' }}>
         {filteredProducts.length === 0 ? (
           <div className="col-span-2 text-center text-xs text-muted py-20">
             No items matched your filter query.
