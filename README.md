@@ -14,19 +14,19 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 [![PWA](https://img.shields.io/badge/PWA-Enabled-orange)](https://web.dev/progressive-web-apps/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
 
-[🚀 Live Demo](https://vendoros.com) · [📖 Setup Guide](#7-installation--setup)
+[ Live Demo](https://vendoros.com) · [ Setup Guide](#7-installation--setup)
 
 </div>
 
 ---
 
-## 📱 App Screenshots — Mobile Layout (390 × 844 px)
+##  App Screenshots — Mobile Layout (390 × 844 px)
 
 > All screenshots captured at **iPhone 16 / 390 × 844 px** resolution — actual mobile viewport rendering.
 
 ---
 
-### 🔐 Section 1 — Authentication Screen
+###  Section 1 — Authentication Screen
 
 <div align="center">
 <img src="public/screenshots/readme/01_auth_login.png" width="300" alt="VendorOS Auth — Sign In screen with email, password and Google OAuth" />
@@ -36,7 +36,7 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 
 ---
 
-### 🏠 Section 2 — Home Dashboard
+###  Section 2 — Home Dashboard
 
 <div align="center">
 <img src="public/screenshots/readme/02_home_dashboard.png" width="300" alt="VendorOS Home Dashboard — Today Sales, Orders, Kitchen Queue, Quick Actions" />
@@ -51,7 +51,7 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 
 ---
 
-### 🛒 Section 3 — POS Terminal
+###  Section 3 — POS Terminal
 
 <div align="center">
 <img src="public/screenshots/mobile.png" width="300" alt="VendorOS POS Terminal — 2-column product catalog with category filters and GST checkout" />
@@ -61,14 +61,14 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 - Customer phone auto-lookup + name tagging at top
 - Live search bar (`Search burgers, tea, sides...`)
 - Category filter pills (All Items, Burgers, Drinks, Sides)
-- Product cards with food images, `⚡ READY` status badges, prices
+- Product cards with food images, ` READY` status badges, prices
 - Sticky bottom checkout showing **₹0.00 Includes GST (5%)**
 - Orange gradient **Checkout** CTA button
 - Center `+` POS button in bottom navigation for instant order entry
 
 ---
 
-### 📋 Section 4 — Orders / Kitchen Display System (KDS)
+###  Section 4 — Orders / Kitchen Display System (KDS)
 
 <div align="center">
 <img src="public/screenshots/readme/04_orders_view.png" width="300" alt="VendorOS Orders KDS — Active queue with preparing/pending orders, Mark Ready button" />
@@ -79,11 +79,11 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 - Order cards showing: customer name, items list, total (₹210, ₹120), elapsed time
 - **MARK READY** (orange) and **CANCEL** (red) action buttons per order
 - Orders sorted by wait time — longest waiting shown first
-- Thermal receipt print button (🖨️) on each card
+- Thermal receipt print button () on each card
 
 ---
 
-### 📦 Section 5 — Ingredient Inventory & Stock Thresholds
+###  Section 5 — Ingredient Inventory & Stock Thresholds
 
 <div align="center">
 <img src="public/screenshots/readme/05_inventory_stock.png" width="300" alt="VendorOS Inventory — Ingredient list with stock levels, LOW alert badge, threshold control" />
@@ -91,15 +91,15 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 
 **Ingredient Inventory Control** — Storage status dashboard showing:
 - Live stock counts per ingredient (25 pcs, 30 pcs, 3 kg, 40 pcs)
-- `⚠️ LOW` red badge when stock drops below threshold (Potato Raw: 3 kg < 5 kg threshold)
+- ` LOW` red badge when stock drops below threshold (Potato Raw: 3 kg < 5 kg threshold)
 - `−` / `+` stepper controls for manual stock adjustment
-- ⚙️ settings gear to configure threshold levels per ingredient
+-  settings gear to configure threshold levels per ingredient
 - **+ Add Stock** CTA button for new ingredient onboarding
 - Ingredient-to-product links (1 Burger = 1 patty + 1 bun + 1 cheese, depleted atomically on order)
 
 ---
 
-### ⚙️ Section 6 — Admin Panel — System Settings
+###  Section 6 — Admin Panel — System Settings
 
 <div align="center">
 <img src="public/screenshots/readme/06_admin_taxes.png" width="300" alt="VendorOS Admin Settings — Identity access control, GST settings, dark mode toggle" />
@@ -114,7 +114,7 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 
 ---
 
-### 📊 Section 7 — AI Predictive Analytics
+###  Section 7 — AI Predictive Analytics
 
 <div align="center">
 <img src="public/screenshots/readme/09_analytics_charts.png" width="300" alt="VendorOS Analytics — Store metrics, revenue donut chart, AI predictive forecasting" />
@@ -133,7 +133,7 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 
 ---
 
-## 🖥️ Desktop Portfolio View
+##  Desktop Portfolio View
 
 <div align="center">
 <img src="public/screenshots/readme/home_desktop.png" width="700" alt="VendorOS Desktop Portfolio — Left sidebar with controls, center phone preview, right product spec panel" />
@@ -146,16 +146,16 @@ built for street food vendors, tea stalls, food trucks, and micro-restaurants.**
 
 ---
 
-## 🏗️ Architecture & System Design
+##  Architecture & System Design
 
 ```mermaid
 graph TD
-    Client[📱 Mobile Client / PWA] -->|HTTPS / JWT Auth| Server[⚡ Next.js 16 App Server]
-    Client -->|WebSocket| Realtime[🔄 Supabase Realtime]
-    Server -->|Outbound HTTPS| MetaAPI[💬 Meta WhatsApp Cloud API]
-    Server -->|Outbound HTTPS| Razorpay[💳 Razorpay Payment API]
-    Server -->|SQL / IAM| Postgres[(🐘 Supabase PostgreSQL)]
-    Client -.->|Offline Fallback| LocalDB[(💾 LocalStorage DB)]
+    Client[ Mobile Client / PWA] -->|HTTPS / JWT Auth| Server[ Next.js 16 App Server]
+    Client -->|WebSocket| Realtime[ Supabase Realtime]
+    Server -->|Outbound HTTPS| MetaAPI[ Meta WhatsApp Cloud API]
+    Server -->|Outbound HTTPS| Razorpay[ Razorpay Payment API]
+    Server -->|SQL / IAM| Postgres[( Supabase PostgreSQL)]
+    Client -.->|Offline Fallback| LocalDB[( LocalStorage DB)]
     LocalDB -.->|Sync on reconnect| Postgres
 ```
 
@@ -170,22 +170,22 @@ graph TD
 
 ---
 
-## 🧩 Module Blueprint
+##  Module Blueprint
 
 | Module | Description |
 |--------|-------------|
-| 🛒 **POS Engine** | 2-column mobile catalog, sticky GST checkout, UPI QR deep links, inclusive GST price correction |
-| 📺 **Kitchen Display System** | Realtime order grid sorted by wait time, full `pending → preparing → ready → completed` lifecycle |
-| 💬 **WhatsApp Automation** | Timeline log, editable templates with placeholders, live simulator, Meta Cloud API |
-| 📦 **Inventory Control** | Ingredient-product linking, stock threshold managers, atomic depletion, low-stock banners |
-| 🤖 **AI Predictive Analytics** | Moving average forecasts, stockout timelines, auto combo promotion suggestions |
-| 👥 **CRM Campaigns** | Historic buyer database, bulk WhatsApp broadcast, audience size + phone clouds |
-| 🎨 **Display Theme System** | Tailwind v4 dark/light class toggling, persisted per-device preference |
-| 🔐 **License Gates** | JWT + RLS + HMAC webhooks + remote `is_active` license expiry overlay |
+|  **POS Engine** | 2-column mobile catalog, sticky GST checkout, UPI QR deep links, inclusive GST price correction |
+|  **Kitchen Display System** | Realtime order grid sorted by wait time, full `pending → preparing → ready → completed` lifecycle |
+|  **WhatsApp Automation** | Timeline log, editable templates with placeholders, live simulator, Meta Cloud API |
+|  **Inventory Control** | Ingredient-product linking, stock threshold managers, atomic depletion, low-stock banners |
+|  **AI Predictive Analytics** | Moving average forecasts, stockout timelines, auto combo promotion suggestions |
+|  **CRM Campaigns** | Historic buyer database, bulk WhatsApp broadcast, audience size + phone clouds |
+|  **Display Theme System** | Tailwind v4 dark/light class toggling, persisted per-device preference |
+|  **License Gates** | JWT + RLS + HMAC webhooks + remote `is_active` license expiry overlay |
 
 ---
 
-## 🗄️ Database & Schema Model
+##  Database & Schema Model
 
 VendorOS uses **Supabase PostgreSQL** with Row-Level Security on every table:
 
@@ -218,7 +218,7 @@ CREATE FUNCTION create_order_secure(...)
 
 ---
 
-## 🔒 Security & Threat Model
+##  Security & Threat Model
 
 ```sql
 -- Row-Level Security enforced on all tables
@@ -239,7 +239,7 @@ CREATE POLICY "Orders access for members" ON public.orders
 
 ---
 
-## ⚡ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -256,7 +256,7 @@ CREATE POLICY "Orders access for members" ON public.orders
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -306,7 +306,7 @@ npm run dev
 # → http://localhost:3000
 ```
 
-### 🧪 Offline Sandbox Mode (No Supabase Required)
+###  Offline Sandbox Mode (No Supabase Required)
 
 Use the built-in sandbox credential to test locally without any cloud setup:
 
@@ -319,7 +319,7 @@ This bypasses Supabase auth and loads a full `localStorage` offline database wit
 
 ---
 
-## 🧪 Testing & Verification
+##  Testing & Verification
 
 ```bash
 # Run TypeScript unit test suite
@@ -337,7 +337,7 @@ npm run cap:sync
 
 ---
 
-## 📱 PWA & Google Play (TWA) Integration
+##  PWA & Google Play (TWA) Integration
 
 VendorOS ships with a full **Trusted Web Activity** configuration for Google Play Store distribution:
 
@@ -354,7 +354,7 @@ VendorOS ships with a full **Trusted Web Activity** configuration for Google Pla
 
 ---
 
-## 🏪 Store Onboarding & License Gates
+##  Store Onboarding & License Gates
 
 Distribute VendorOS instances to individual vendors with remote access control:
 
@@ -365,14 +365,14 @@ Distribute VendorOS instances to individual vendors with remote access control:
 
 ---
 
-## 📖 Table of Contents
+##  Table of Contents
 
 1. [App Screenshots](#-app-screenshots--mobile-layout-390--844-px)
-2. [Architecture & System Design](#️-architecture--system-design)
+2. [Architecture & System Design](#-architecture--system-design)
 3. [Module Blueprint](#-module-blueprint)
-4. [Database & Schema Model](#️-database--schema-model)
+4. [Database & Schema Model](#-database--schema-model)
 5. [Security & Threat Model](#-security--threat-model)
-6. [Tech Stack](#️-tech-stack)
+6. [Tech Stack](#-tech-stack)
 7. [Installation & Setup](#-installation--setup)
 8. [Testing & Verification](#-testing--verification)
 9. [PWA & Google Play Integration](#-pwa--google-play-twa-integration)
@@ -382,7 +382,7 @@ Distribute VendorOS instances to individual vendors with remote access control:
 
 <div align="center">
 
-**© 2026 VendorOS SaaS Inc. · Built for the streets ⚡**
+** 2026 VendorOS SaaS Inc. · Built for the streets **
 
 *Mobile-first · Offline-ready · Production-grade*
 
