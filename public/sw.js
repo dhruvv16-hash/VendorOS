@@ -1,9 +1,10 @@
+const BASE_PATH = '/projects/vendoros/app';
 const CACHE_NAME = 'vendoros-cache-v4';
 const urlsToCache = [
-  '/',
-  '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/icons/icon-192.png`,
+  `${BASE_PATH}/icons/icon-512.png`
 ];
 
 self.addEventListener('install', event => {
@@ -47,7 +48,7 @@ self.addEventListener('fetch', event => {
       }).catch(() => {
         // Fallback to cache if offline
         return caches.match(event.request).then(cached => {
-          return cached || caches.match('/');
+          return cached || caches.match(`${BASE_PATH}/`);
         });
       })
     );
@@ -127,12 +128,12 @@ self.addEventListener('notificationclick', event => {
     self.clients.matchAll({ type: 'window' }).then(windowClients => {
       for (let i = 0; i < windowClients.length; i++) {
         const client = windowClients[i];
-        if (client.url === '/' && 'focus' in client) {
+        if (client.url === `${BASE_PATH}/` && 'focus' in client) {
           return client.focus();
         }
       }
       if (self.clients.openWindow) {
-        return self.clients.openWindow('/');
+        return self.clients.openWindow(`${BASE_PATH}/`);
       }
     })
   );

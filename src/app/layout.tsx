@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { VendorProvider } from "@/context/useVendorStore";
 import { PostHogProvider } from "@/components/providers/PostHogProvider";
+import { APP_BASE_PATH, withBasePath } from "@/lib/config";
 import "./globals.css";
 
 
@@ -145,7 +146,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href={withBasePath('/manifest.json')} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -167,7 +168,7 @@ export default function RootLayout({
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+                  navigator.serviceWorker.register('${APP_BASE_PATH}/sw.js').then(function(reg) {
                     console.log('SW registered:', reg.scope);
                     
                     reg.addEventListener('updatefound', function() {

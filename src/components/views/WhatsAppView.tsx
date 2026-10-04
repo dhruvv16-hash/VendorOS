@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { RefreshCw, Send, HelpCircle, Check, CheckCheck, ArrowLeft, MessageSquare, Phone } from 'lucide-react';
 import { useVendor } from '@/context/useVendorStore';
 import { whatsappService } from '@/packages/whatsapp';
+import { withBasePath } from '@/lib/config';
 
 export const WhatsAppView: React.FC = () => {
   const { whatsappLogs, currentStore, storeSettings, updateSettings } = useVendor();
@@ -47,7 +48,7 @@ export const WhatsAppView: React.FC = () => {
     setTestSending(true);
     setTestResult(null);
     try {
-      const res = await fetch('/api/whatsapp/send', {
+      const res = await fetch(withBasePath('/api/whatsapp/send'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

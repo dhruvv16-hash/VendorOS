@@ -1,5 +1,6 @@
 import { EventEmitter } from 'events';
 import { supabase } from '@/lib/supabaseClient';
+import { withBasePath } from '@/lib/config';
 
 export interface WhatsAppLog {
   id: string;
@@ -151,7 +152,7 @@ export class WhatsAppService {
         headers['Authorization'] = 'Bearer SANDBOX-TOKEN';
       }
 
-      const res = await fetch('/api/whatsapp/send', {
+      const res = await fetch(withBasePath('/api/whatsapp/send'), {
         method: 'POST',
         headers,
         body: JSON.stringify({

@@ -3,12 +3,12 @@
   "short_name": "VendorOS",
   "description": "Sleek operating system for food vendors and stalls.",
   "id": "com.vendoros.app",
-  "start_url": "/",
+  "start_url": "/projects/vendoros/app/",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#FF6B35",
   "orientation": "portrait",
-  "scope": "/",
+  "scope": "/projects/vendoros/app/",
   "lang": "en",
   "dir": "ltr",
   "display_override": ["tabbed", "standalone", "window-controls-overlay"],
@@ -16,7 +16,7 @@
     "preferred_width": 480
   },
   "note_taking": {
-    "new_note_url": "/?action=new-note"
+    "new_note_url": "/projects/vendoros/app/?action=new-note"
   },
   "scope_extensions": [
     {
@@ -36,13 +36,13 @@
   "iarc_rating_id": "e8430b80-1a73-455b-9d41-382d3149f90f",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "/projects/vendoros/app/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "/projects/vendoros/app/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -53,27 +53,27 @@
       "name": "POS Terminal",
       "short_name": "POS",
       "description": "Launch the VendorOS Point-of-Sale terminal",
-      "url": "/?tab=pos",
-      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+      "url": "/projects/vendoros/app/?tab=pos",
+      "icons": [{ "src": "/projects/vendoros/app/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Orders Log",
       "short_name": "Orders",
       "description": "View live incoming orders history",
-      "url": "/?tab=orders",
-      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+      "url": "/projects/vendoros/app/?tab=orders",
+      "icons": [{ "src": "/projects/vendoros/app/icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
   "screenshots": [
     {
-      "src": "/screenshots/mobile.png",
+      "src": "/projects/vendoros/app/screenshots/mobile.png",
       "sizes": "466x843",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "VendorOS Mobile POS Terminal"
     },
     {
-      "src": "/screenshots/desktop.png",
+      "src": "/projects/vendoros/app/screenshots/desktop.png",
       "sizes": "390x207",
       "type": "image/png",
       "form_factor": "wide",
@@ -85,13 +85,13 @@
   },
   "file_handlers": [
     {
-      "action": "/?action=open-receipt",
+      "action": "/projects/vendoros/app/?action=open-receipt",
       "accept": {
         "application/json": [".vreceipt"]
       },
       "icons": [
         {
-          "src": "/icons/icon-192.png",
+          "src": "/projects/vendoros/app/icons/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -102,11 +102,11 @@
   "protocol_handlers": [
     {
       "protocol": "web+vendoros",
-      "url": "/?url=%s"
+      "url": "/projects/vendoros/app/?url=%s"
     }
   ],
   "share_target": {
-    "action": "/?action=share",
+    "action": "/projects/vendoros/app/?action=share",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {
@@ -122,11 +122,11 @@
       "description": "VendorOS Daily Sales Statistics Widget",
       "tag": "sales-widget",
       "template": "sales-widget-template",
-      "ms_ac_template": "widgets/sales.json",
-      "data": "widgets/sales-data.json",
+      "ms_ac_template": "/projects/vendoros/app/widgets/sales.json",
+      "data": "/projects/vendoros/app/widgets/sales-data.json",
       "icons": [
         {
-          "src": "/icons/icon-192.png",
+          "src": "/projects/vendoros/app/icons/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
