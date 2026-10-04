@@ -77,4 +77,4 @@ UPDATE public.users
 SET is_super_admin = TRUE,
     access_token_used = 'SANDBOX-TOKEN',
     updated_at = now()
-WHERE email = 'sandbox@vendoros.com' OR id = 'u101';
+WHERE email = 'sandbox@vendoros.com';
